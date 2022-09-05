@@ -1,2 +1,2 @@
 # florarium
-Магазин флорариумов
+Магазин флорариумов https://alfinochka.github.io/florarium/
