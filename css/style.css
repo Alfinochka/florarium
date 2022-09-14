@@ -164,6 +164,7 @@ a {
     align-items: center;
     justify-content: center;
     transition: all 0.3s;
+    flex-shrink: 0;
 }
 
 .cart__img-wrap:hover {
@@ -209,6 +210,62 @@ a {
     object-fit: contain;
 }
 
+.header__burger {
+    display: none;
+    position: relative;
+    width: 55px;
+    height: 33px;
+    z-index: 30;
+    margin-left: 23px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.header__burger::before,
+.header__burger::after {
+    content: "";
+    display: block;
+    background-color: #000000;
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    left: 0;
+    border-radius: 50px;
+}
+
+.header__burger::before {
+    top: 0;
+}
+
+.header__burger::after {
+    bottom: 0;
+}
+
+.header__burger-el {
+    display: block;
+    position: absolute;
+    background-color: #000000;
+    left: 0;
+    height: 5px;
+    width: 55px;
+    top: 14px;
+    border-radius: 50px;
+}
+
+.header__burger.active .header__burger-el {
+    height: 0;
+}
+
+.header__burger.active::before {
+    top: 50%;
+    transform: rotate(45deg);
+}
+
+.header__burger.active::after {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
 /* HEADER END */
 
 /* HERO */
@@ -216,6 +273,7 @@ a {
 .hero {
     height: 573px;
     display: flex;
+    column-gap: 30px;
 }
 
 .hero__desc,
@@ -226,6 +284,12 @@ a {
 
 .hero__desc {
     flex: 0 0 100%;
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .hero__desc::after {
@@ -242,17 +306,50 @@ a {
     z-index: -10;
 }
 
-.nero__content {}
+.hero__content {
+    width: 38%;
+}
 
-.title {}
+.title,
+.section__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+}
 
 .subtitle {}
 
-.hero__subtitle {}
+.hero__subtitle {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.33;
+    margin-top: 25px;
+    margin-bottom: 31px;
+}
 
-.btn {}
+.btn {
+    background: #FFBF42;
+    border-radius: 50px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
 
-.hero__link {}
+.btn:hover {
+    background: #6af633;
+}
+
+.hero__link {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.14);
+    width: 256px;
+    min-height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 131.19%;
+    padding: 15px 20px;
+}
 
 .hero__slider {
     flex: 0 0 50%;
