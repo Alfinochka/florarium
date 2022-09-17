@@ -6,9 +6,7 @@
     .header__burger {
         display: block;
     }
-}
 
-@media (max-width: 768px) {
     .hero {
         height: 942px;
         flex-direction: column;
@@ -39,4 +37,25 @@
         margin-left: 18%;
     }
 
+    .product {
+        padding-bottom: 58px;
+    }
+
+    .product__slider {
+        margin: 0px;
+    }
+
+    .product__slider-ctrls {
+        display: none;
+    }
+
+    .product__list {
+        padding: 0px 17px 29px;
+        justify-content: flex-start;
+        overflow: auto;
+    }
+
+    .product__item {
+        flex: 0 0 auto;
+    }
 }
