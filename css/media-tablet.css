@@ -58,4 +58,32 @@
     .product__item {
         flex: 0 0 auto;
     }
+
+    .gallery__items {
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .feedback {
+        padding: 51px 0 117px;
+    }
+
+    .feedback__title {
+        margin-bottom: 23px;
+    }
+
+    .feedback__list-wrap {
+        display: flex;
+        justify-content: center;
+        overflow-y: auto;
+        max-height: 640px;
+    }
+
+    .feedback__list {
+        column-gap: 0px;
+        row-gap: 72px;
+        flex-direction: column;
+        padding-right: 101px;
+    }
+
 }
